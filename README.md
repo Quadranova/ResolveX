@@ -1,20 +1,104 @@
 # ResolveX
 ResolveX is an AI-powered civic issue reporting platform that lets users report problems by uploading an image, location, and description. Gemini AI automatically detects the issue category and severity, helping prioritize cases. It improves transparency, speeds up reporting, and enables efficient resolution by connecting citizens with authorities.
-# Problem Statement
 
-## Cities face thousands of unresolved civic issues every day:
+# 📌 Problem Statement
 
-Garbage overflow
-Water leakage
-Road damage
-Broken street lights
-Drainage problems
-Stray animal issues
+Cities face thousands of unresolved civic issues every day such as:
+- Garbage overflow
+- Water leakage
+- Road damage
+- Broken street lights
+- Drainage issues
+- Stray animal complaints
 
-## Citizens often:
+Citizens often struggle to:
+- Report issues easily
+- Track complaint progress
+- Receive timely updates
+- Trust civic management systems
 
-Don’t know where to report issues
-Cannot track complaint progress
-Lose trust due to delayed resolutions
+ResolveX provides a smart and transparent platform where citizens can report civic issues, track progress, and authorities can manage complaints efficiently using AI-powered analysis.
 
-ResolveX solves this by providing a smart AI-powered platform where citizens can report issues, track progress, and authorities can manage complaints efficiently.
+---
+
+# 🎯 Project Objective
+
+ResolveX aims to:
+- Simplify civic issue reporting
+- Improve transparency
+- Reduce complaint resolution delays
+- Use AI for automatic issue analysis
+- Build trust between citizens and authorities
+
+---
+
+# 🧠 Features
+
+## 👤 User Authentication
+- Signup/Login system
+- Flask session authentication
+- Password hashing
+- Role-based access
+
+### Roles:
+- Citizen
+- Official
+- Supervisor
+
+---
+
+# 🏠 Role-Based Dashboards
+
+## 👥 Citizen Dashboard
+- Report civic issues
+- Track complaint status
+- View complaint history
+- Civic Trust Score
+- Notifications
+- Download complaint reports
+
+## 🏢 Official Dashboard
+- View assigned complaints
+- Update complaint status
+- Upload resolution proof
+- Mark complaints resolved
+
+## 🛡️ Supervisor Dashboard
+- Monitor all complaints
+- View analytics dashboard
+- Reassign complaints
+- Track SLA delays
+- Monitor official performance
+
+---
+
+# 📍 Issue Reporting System
+
+Citizens can:
+- Upload complaint image
+- Enter issue title
+- Add description
+- Add location
+- Use auto geolocation
+- Select category
+- Select severity
+
+### Categories
+- Garbage
+- Water Leakage
+- Road Damage
+- Street Light
+- Drainage
+- Stray Dogs
+- Others
+
+### Severity Levels
+| Severity | Color |
+|---|---|
+| High | 🔴 Red |
+| Medium | 🟡 Yellow |
+| Low | 🟢 Green |
+
+Uploaded files are stored locally in:
+```text
+static/uploads/
