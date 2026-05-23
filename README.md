@@ -262,6 +262,6 @@ STEPS TO OPTIMIZE COST
 🟡 Database Integration (Future)  
 
 # Vision
-Report → Analyze → Track → Resolve
+# Report → Analyze → Track → Resolve
 Building smarter and more transparent civic management.
 
