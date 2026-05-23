@@ -143,3 +143,22 @@ QR codes are stored locally in:
 ```text
 static/qr_codes/
 ```
+# 📊 Public Transparency Dashboard
+
+A public analytics dashboard displaying real-time civic complaint statistics and transparency reports.
+
+### Features:
+- Total complaints
+- Resolved complaints
+- Pending complaints
+- Average response time
+- Most common issue categories
+
+### Dashboard Includes:
+- 📈 Charts
+- 📋 Analytics cards
+- 📊 Statistics
+- 📉 Visual reports
+
+Built using:
+- Chart.js
