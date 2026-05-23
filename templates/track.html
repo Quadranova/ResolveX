@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,3 +59,65 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Status Tracking</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f4f6f9; color: #333; margin: 0; padding: 40px 20px; }
+        .card { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { color: #1e293b; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; }
+        .meta-item { margin: 15px 0; font-size: 16px; }
+        .label { font-weight: bold; color: #64748b; text-transform: uppercase; font-size: 12px; display: block; margin-bottom: 4px; }
+        .value { font-size: 16px; color: #0f172a; }
+        .badge { display: inline-block; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+        .status-resolved { background: #dcfce7; color: #15803d; }
+        .status-progress { background: #fef9c3; color: #a16207; }
+        .status-started { background: #fee2e2; color: #b91c1c; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Complaint Live Tracking</h2>
+    
+    <div class="meta-item">
+        <span class="label">Complaint ID</span>
+        <span class="value">#{{ issue.id }}</span>
+    </div>
+    
+    <div class="meta-item">
+        <span class="label">Category</span>
+        <span class="value">{{ issue.category }}</span>
+    </div>
+    
+    <div class="meta-item">
+        <span class="label">Description</span>
+        <span class="value">{{ issue.description }}</span>
+    </div>
+    
+    <div class="meta-item">
+        <span class="label">Severity</span>
+        <span class="value">{{ issue.severity }}</span>
+    </div>
+    
+    <div class="meta-item">
+        <span class="label">Live Status</span>
+        <span class="value">
+            {% if issue.status == 'Resolved' %}
+                <span class="badge status-resolved">{{ issue.status }}</span>
+            {% elif issue.status == 'Under Progress' %}
+                <span class="badge status-progress">{{ issue.status }}</span>
+            {% else %}
+                <span class="badge status-started">{{ issue.status }}</span>
+            {% endif %}
+        </span>
+    </div>
+</div>
+
+</body>
+</html>
+>>>>>>> c077353 (Deployment ready)

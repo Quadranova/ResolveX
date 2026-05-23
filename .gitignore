@@ -1,2 +1,6 @@
 .env
+<<<<<<< HEAD
 __pycache__/
+=======
+__pycache__/
+>>>>>>> c077353 (Deployment ready)

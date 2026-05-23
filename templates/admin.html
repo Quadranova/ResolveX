@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,3 +74,80 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ResolveX - Admin Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f6f9; }
+        .container { max-width: 1050px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        h2, h3 { color: #0056b3; }
+        .logout { float: right; background: #dc3545; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 14px;}
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; }
+        th { background-color: #0056b3; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        select, button { padding: 6px; border-radius: 4px; border: 1px solid #ccc; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="logout">Logout</a>
+        <h2>Internal Administration Console</h2>
+        <p>Manage workflow escalations, monitor resolution metrics, and update case routing criteria.</p>
+        
+        <hr>
+
+        <h3>📋 Active Issue Routing Matrix</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>AI Multimodal Details / Localization Notes</th>
+                    <th>Urgency Level</th>
+                    <th>Current Status</th>
+                    <th>Workflow Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for issue in issues | reverse %}
+                <tr>
+                    <td>{{ issue.id }}</td>
+                    <td><strong>{{ issue.category }}</strong></td>
+                    <td>{{ issue.description }}</td>
+                    <form method="POST">
+                        <input type="hidden" name="issue_id" value="{{ issue.id }}">
+                        <td>
+                            <select name="severity">
+                                <option value="Low" {% if issue.severity == 'Low' %}selected{% endif %}>Low</option>
+                                <option value="Medium" {% if issue.severity == 'Medium' %}selected{% endif %}>Medium</option>
+                                <option value="High" {% if issue.severity == 'High' %}selected{% endif %}>High</option>
+                                <option value="Critical" {% if issue.severity == 'Critical' %}selected{% endif %}>Critical</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="status">
+                                <option value="Not Yet Started" {% if issue.status == 'Not Yet Started' %}selected{% endif %}>Not Yet Started</option>
+                                <option value="Under Progress" {% if issue.status == 'Under Progress' %}selected{% endif %}>Under Progress</option>
+                                <option value="Resolved" {% if issue.status == 'Resolved' %}selected{% endif %}>Resolved</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="submit">Update Case</button>
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+>>>>>>> c077353 (Deployment ready)

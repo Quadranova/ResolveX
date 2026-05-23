@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 Flask
 google-genai
 python-dotenv
 qrcode
 Pillow
 gunicorn
+=======
+Flask
+google-genai
+python-dotenv
+qrcode
+Pillow
+gunicorn
+>>>>>>> c077353 (Deployment ready)
