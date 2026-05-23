@@ -140,7 +140,7 @@ AI analysis is returned in the selected language.
 
 | Category | Technology |
 |----------|------------|
-| Frontend | ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white) |
+| Frontend | ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white) 
 | Backend | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-black?logo=flask&logoColor=white) |
 | AI | ![Gemini](https://img.shields.io/badge/Gemini_AI-4285F4?logo=google&logoColor=white) |
 | Storage | ![Memory](https://img.shields.io/badge/In_Memory-34A853?style=flat) |
