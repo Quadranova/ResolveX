@@ -104,13 +104,11 @@ Uploaded files are stored locally in:
 static/uploads/
 ```
 
-# AI Image Analysis (Google Gemini API)
+# 🤖 AI Image Analysis (Google Gemini API)
 
-## When a user uploads an image:
-
-Gemini AI analyzes the complaint image
-Detects issue category
-Predicts severity
-Suggests department
-Detects spam/fake images
-Example AI Outputstatic/uploads/
+When a user uploads an image:
+- Gemini AI analyzes the complaint image
+- Detects issue category
+- Predicts severity
+- Suggests department
+- Detects spam/fake images
