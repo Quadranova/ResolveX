@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ResolveX - Citizen Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f6f9; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        h2, h3 { color: #0056b3; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, textarea, select, button { width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #28a745; color: white; border: none; font-weight: bold; cursor: pointer; margin-top: 20px;}
+        button:hover { background-color: #218838; }
+        
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px; margin-bottom: 30px; margin-top: 15px;}
+        .score-card { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 12px; border-top: 4px solid #0056b3; }
+        .score-header { display: flex; justify-content: space-between; align-items: center; font-weight: bold; margin-bottom: 8px; border-bottom: 1px dashed #ccc; padding-bottom: 5px; font-size: 14px;}
+        .score-num { font-size: 20px; font-weight: bold; color: #28a745; }
+        .metric-breakdown { font-size: 12px; color: #555; line-height: 1.5; }
+
+        .issue-card { border-left: 5px solid #0056b3; background: #f8f9fa; padding: 15px; margin-top: 15px; border-radius: 4px; }
+        .status-badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; background: #e2e3e5; color: black; }
+        
+        .sev-badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; color: white; }
+        .sev-critical, .sev-high { background-color: #dc3545; } 
+        .sev-medium { background-color: #ffc107; color: black; } 
+        .sev-low { background-color: #28a745; } 
+        
+        .logout { float: right; background: #dc3545; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 14px;}
+        .ai-banner { background-color: #e7f3ff; color: #004085; padding: 10px; border-radius: 4px; margin-bottom: 15px; border-left: 4px solid #007bff; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="logout">Logout</a>
+        <h2>Citizen Service Portal</h2>
+        <p>Welcome to <strong>ResolveX</strong>. Report issues effortlessly with automated infrastructure routing.</p>
+        
+        <hr>
+
+        <h3>📊 Public Department Civic Trust Scores</h3>
+        <p style="font-size: 13px; color: #666; margin-top: -10px;">Track historical performance metrics directly driven by Resolution Rate, Response Speed, SLA Adherence, and Citizen Satisfaction.</p>
+        <div class="score-grid">
+            {% for dept, metrics in trust_scores.items() %}
+            <div class="score-card">
+                <div class="score-header">
+                    <span>{{ dept }}</span>
+                    <span class="score-num">{{ metrics.overall }}/100</span>
+                </div>
+                <div class="metric-breakdown">
+                    📈 <strong>Resolution Rate:</strong> {{ metrics.resolution_rate }}%<br>
+                    ⚡ <strong>Response Speed:</strong> {{ metrics.response_speed }}%<br>
+                    🛡️ <strong>SLA Adherence:</strong> {{ metrics.sla_adherence }}%<br>
+                    👤 <strong>Citizen Satisfaction:</strong> {{ metrics.citizen_sat }}%
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+        
+        <h3>📢 AI-Powered Infrastructure Intake</h3>
+        <div class="ai-banner">
+            ✨ <strong>ResolveX Automation Matrix:</strong> Drop an image and description below. The platform leverages computer vision to automatically map the issue to one of our 9 officially supported municipal fields, prioritize by risk severity, and route tickets instantly.
+        </div>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label>Select Your Preferred Feedback Language:</label>
+            <select name="language">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi (हिन्दी)</option>
+                <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            </select>
+
+            <label>Upload Media/Image of the Issue:</label>
+            <input type="file" name="image_file" accept="image/*" required>
+
+            <label>Citizen Context/Notes:</label>
+            <textarea name="description" rows="4" placeholder="Mention cross-streets, dynamic hazards, or any visual context..." required></textarea>
+
+            <button type="submit">Submit Issue to ResolveX AI</button>
+        </form>
+
+        <hr style="margin-top:40px;">
+
+        <h3>📍 Live Incident Tracking Registry</h3>
+        {% for issue in issues | reverse %}
+        <div class="issue-card">
+            <h4>📁 Classification: {{ issue.category }}</h4>
+            <p><strong>AI Multimodal Analysis:</strong> {{ issue.description }}</p>
+            
+            <p><strong>Calculated Urgency Level:</strong> 
+                {% if 'Critical' in issue.severity or 'High' in issue.severity %}
+                    <span class="sev-badge sev-high">{{ issue.severity }}</span>
+                {% elif 'Medium' in issue.severity %}
+                    <span class="sev-badge sev-medium">{{ issue.severity }}</span>
+                {% else %}
+                    <span class="sev-badge sev-low">{{ issue.severity }}</span>
+                {% endif %}
+            </p>
+            
+            <p><strong>Status:</strong> <span class="status-badge">{{ issue.status }}</span></p>
+        </div>
+        {% else %}
+        <p>No issues reported within this regional grid yet.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
