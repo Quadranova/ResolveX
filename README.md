@@ -358,3 +358,22 @@ http://127.0.0.1:5000
 - Session authentication
 - Input validation
 - Secure API key storage
+# 📸 Screenshots
+
+## 🏠 Home Page
+(Add screenshot here)
+
+---
+
+## 👥 Citizen Dashboard
+(Add screenshot here)
+
+---
+
+## 🤖 AI Analysis
+(Add screenshot here)
+
+---
+
+## 📊 Public Analytics
+(Add screenshot here)
