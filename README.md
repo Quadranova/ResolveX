@@ -169,6 +169,80 @@ If a complaint is not updated within:
 ```text
 48 hours
 ```
+# 🏅 Civic Trust Score
+
+Citizens gain points for:
+- Genuine complaints
+- Active participation
+
+Citizens lose points for:
+- Spam reports
+- Fake complaints
+
+### Badge Levels
+- 🥉 Bronze
+- 🥈 Silver
+- 🥇 Gold
+
+---
+
+# 📄 Downloadable Reports
+
+Users can download complaint reports containing:
+- Complaint ID
+- Citizen details
+- Complaint details
+- Status
+- Resolution details
+
+---
+
+# 🎨 UI/UX Features
+
+- Modern UI
+- Responsive design
+- Clean dashboard layout
+- Card-based interface
+- Smooth buttons
+- Mobile-friendly
+- Simple navigation
+
+---
+
+# 🔥 Optional Advanced Features
+
+- Dark mode
+- Complaint search
+- Duplicate complaint detection
+- Fake image detection
+- Live complaint map
+- Complaint heatmap
+- Mobile responsiveness
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Chart.js
+
+## Backend
+- Python Flask
+
+## AI
+- Google Gemini API
+
+## Database
+- Python dictionaries (temporary in-memory database)
+
+## Other Libraries
+- qrcode
+- werkzeug
+- dotenv
 
 The system automatically:
 - Flags the complaint
