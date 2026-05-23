@@ -244,9 +244,10 @@ super123
 - Database integration
 - Authentication system
 - Complaint notifications
-- File storage
 - Government integration
 - Analytics dashboard
+- Integration with existing municipal CCTV infrastructure
+- Voice-based complaint reporting
 
 # Hackathon Highlights
 - AI Vision Analysis
