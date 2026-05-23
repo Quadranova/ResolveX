@@ -135,6 +135,7 @@ Supported languages:
 - English
 - Hindi
 - Kannada
+
 AI analysis is returned in the selected language.
 
 # Tech Stack
@@ -239,6 +240,11 @@ super123
 | ResolveX Software Platform (Prototype → Production) | ₹6L – ₹20L |
 | Medium City Deployment (with phased CCTV integration) | ₹1Cr – ₹3Cr |
 | Full Smart City Deployment | ₹5Cr – ₹12Cr+ |
+
+STEPS TO OPTIMIZE COST
+1. Phase-wise Deployment
+2. Edge AI Processing
+3. Citizen-driven reporting first
 
 # Hackathon Highlights
 - AI Vision Analysis
