@@ -248,3 +248,42 @@ The system automatically:
 - Flags the complaint
 - Notifies the supervisor
 - Highlights delayed cases for faster resolution
+# 📁 Project Structure
+
+```text
+ResolveX/
+│
+├── app.py
+├── ai_analysis.py
+├── requirements.txt
+├── README.md
+├── .env
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── main.js
+│   │
+│   ├── uploads/
+│   │
+│   └── qr_codes/
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── citizen_dashboard.html
+│   ├── official_dashboard.html
+│   ├── supervisor_dashboard.html
+│   ├── report_issue.html
+│   ├── complaint_details.html
+│   ├── analytics.html
+│   └── my_requests.html
+│
+└── utils/
+    ├── auth.py
+    ├── notifications.py
+    └── sla_checker.py
+```
