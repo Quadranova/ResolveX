@@ -241,10 +241,8 @@ super123
 | Medium City Deployment (with phased CCTV integration) | ₹1Cr – ₹3Cr |
 | Full Smart City Deployment | ₹5Cr – ₹12Cr+ |
 
-STEPS TO OPTIMIZE COST
-1. Phase-wise Deployment
-2. Edge AI Processing
-3. Citizen-driven reporting first
+Here we are using 'Phase-wise Deployment'
+
 
 # Hackathon Highlights
 - AI Vision Analysis
@@ -262,6 +260,6 @@ STEPS TO OPTIMIZE COST
 🟡 Database Integration (Future)  
 
 # Vision
-# Report → Analyze → Track → Resolve
+# "Report → Analyze → Track → Resolve"
 Building smarter and more transparent civic management.
 
