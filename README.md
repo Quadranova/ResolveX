@@ -80,8 +80,7 @@ Citizens can:
 - Add description
 - Add location
 - Use auto geolocation
-- Select category
-- Select severity
+
 
 ### Categories
 - Garbage
@@ -112,3 +111,13 @@ When a user uploads an image:
 - Predicts severity
 - Suggests department
 - Detects spam/fake images
+
+
+### Example AI Output
+
+```text
+Issue Detected: Garbage Overflow
+Severity: High
+Department: Sanitation
+Confidence: 92%
+```
