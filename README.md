@@ -119,5 +119,15 @@ When a user uploads an image:
 Issue Detected: Garbage Overflow
 Severity: High
 Department: Sanitation
+```
+
+# 🌐 Multi-Language Support
+
+Supported Languages:
+- English
+- Hindi
+- Kannada
+
+Gemini AI generates responses in the user-selected language for a more accessible and inclusive experience.
 Confidence: 92%
 ```
