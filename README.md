@@ -1,349 +1,225 @@
 # ResolveX
-ResolveX is an AI-powered civic issue reporting platform that lets users report problems by uploading an image, location, and description. Gemini AI automatically detects the issue category and severity, helping prioritize cases. It improves transparency, speeds up reporting, and enables efficient resolution by connecting citizens with authorities.
 
-# 📌 Problem Statement
+# ResolveX
 
-Cities face thousands of unresolved civic issues every day such as:
-- Garbage overflow
-- Water leakage
-- Road damage
-- Broken street lights
-- Drainage issues
-- Stray animal complaints
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![QR_Code](https://img.shields.io/badge/QR_Tracking-111827?style=for-the-badge)
+![Hackathon](https://img.shields.io/badge/Hackathon_Project-FF6B00?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge)
 
-Citizens often struggle to:
-- Report issues easily
-- Track complaint progress
-- Receive timely updates
-- Trust civic management systems
+ResolveX is an AI-powered civic issue reporting platform that enables citizens to report infrastructure issues through image submission and AI-assisted analysis.
 
-ResolveX provides a smart and transparent platform where citizens can report civic issues, track progress, and authorities can manage complaints efficiently using AI-powered analysis.
+# Problem Statement
 
----
+Urban civic issues are often:
+- Difficult to report
+- Slow to resolve
+- Hard to track
+- Lacking transparency
 
-# 🎯 Project Objective
+Citizens frequently experience:
+- Delayed action
+- No visibility into progress
+- Poor communication with authorities
+
+ResolveX addresses this using AI-assisted issue analysis and transparent tracking.
+
+# Project Objective
 
 ResolveX aims to:
-- Simplify civic issue reporting
-- Improve transparency
-- Reduce complaint resolution delays
-- Use AI for automatic issue analysis
-- Build trust between citizens and authorities
 
----
+- Simplify complaint reporting
+- Automate issue categorization
+- Improve operational transparency
+- Enable complaint tracking
+- Support multilingual accessibility
 
-# 🧠 Features
+# Features
 
-## 👤 User Authentication
-- Signup/Login system
-- Flask session authentication
-- Password hashing
-- Role-based access
+## AI Complaint Analysis
+Citizens upload an image.
 
-### Roles:
-- Citizen
-- Official
-- Supervisor
+Gemini AI automatically:
+- Detects civic issue category
+- Estimates severity
+- Generates complaint summary
+- Produces output in selected language
 
----
+Supported categories:
+- Potholes & Road Damage
+- Garbage Accumulation
+- Water Leakage
+- Broken Streetlights
+- Drainage Issues
+- Traffic Signal Failures
+- Electrical Hazards
+- Public Safety Risks
+- Stray Dogs Issue
 
-# 🏠 Role-Based Dashboards
+Severity Levels:
+- Low
+- Medium
+- High
+- Critical
 
-## 👥 Citizen Dashboard
-- Report civic issues
-- Track complaint status
-- View complaint history
-- Civic Trust Score
-- Notifications
-- Download complaint reports
-
-## 🏢 Official Dashboard
-- View assigned complaints
-- Update complaint status
-- Upload resolution proof
-- Mark complaints resolved
-
-## 🛡️ Supervisor Dashboard
-- Monitor all complaints
-- View analytics dashboard
-- Reassign complaints
-- Track SLA delays
-- Monitor official performance
-
----
-
-# 📍 Issue Reporting System
+## Citizen Dashboard
 
 Citizens can:
-- Upload complaint image
-- Enter issue title
-- Add description
-- Add location
-- Use auto geolocation
 
+- Upload issue images
+- Add issue description
+- Select preferred language
+- Submit complaints
+- View complaint history
+- Track complaints using QR code
+- View Civic Trust Scores
 
-### Categories
-- Garbage
-- Water Leakage
-- Road Damage
-- Street Light
-- Drainage
-- Stray Dogs
-- Others
+## Admin Dashboard
 
-### Severity Levels
-| Severity | Color |
-|---|---|
-| High | 🔴 Red |
-| Medium | 🟡 Yellow |
-| Low | 🟢 Green |
+Admins can:
+- View complaint records
+- Update complaint severity
+- Change complaint resolution status
 
-Uploaded files are stored locally in:
-```text
-static/uploads/
-```
+Statuses:
+- Not Yet Started
+- Under Progress
+- Resolved
 
-# 🤖 AI Image Analysis (Google Gemini API)
+## Supervisor Dashboard
 
-When a user uploads an image:
-- Gemini AI analyzes the complaint image
-- Detects issue category
-- Predicts severity
-- Suggests department
-- Detects spam/fake images
+Supervisors can:
+- Reassign issue categories
+- Adjust severity
+- Monitor department trust metrics
+- Review complaint routing
 
+## QR Complaint Tracking
 
-### Example AI Output
+Each complaint generates a QR code.
+Scanning opens:
 
 ```text
-Issue Detected: Garbage Overflow
-Severity: High
-Department: Sanitation
+/track/<issue_id>
 ```
 
-# 🌐 Multi-Language Support
+Users can view:
+- Complaint ID
+- Category
+- AI Summary
+- Severity
+- Resolution Status
 
-Supported Languages:
+## Civic Trust Score
+
+ResolveX calculates department trust using:
+
+- Resolution Rate
+- Response Speed
+- SLA Adherence
+- Citizen Satisfaction
+
+Departments:
+- Public Works
+- Waste Management
+- Water Supply
+- Electrical
+- Traffic Control
+- Public Safety
+
+## Multi-Language Support
+
+Supported languages:
 - English
 - Hindi
 - Kannada
+AI analysis is returned in the selected language.
 
-Gemini AI generates responses in the user-selected language for a more accessible and inclusive experience.
-Confidence: 92%
+# Tech Stack
 
-# 📱 QR Code Complaint Tracking
+# 🛠 Tech Stack
 
-Every complaint generates a unique QR code.
-
-When scanned:
-- Opens the complaint tracking page directly
-
-QR codes are stored locally in:
-
-```text
-static/qr_codes/
-```
-# 📊 Public Transparency Dashboard
-
-A public analytics dashboard displaying real-time civic complaint statistics and transparency reports.
-
-### Features:
-- Total complaints
-- Resolved complaints
-- Pending complaints
-- Average response time
-- Most common issue categories
-
-### Dashboard Includes:
-- 📈 Charts
-- 📋 Analytics cards
-- 📊 Statistics
-- 📉 Visual reports
-
-Built using:
-- Chart.js
-# ⏰ SLA Escalation System
-
-If a complaint is not updated within:
-
-```text
-48 hours
-```
-# 🏅 Civic Trust Score
-
-Citizens gain points for:
-- Genuine complaints
-- Active participation
-
-Citizens lose points for:
-- Spam reports
-- Fake complaints
-
-### Badge Levels
-- 🥉 Bronze
-- 🥈 Silver
-- 🥇 Gold
-
----
-
-# 📄 Downloadable Reports
-
-Users can download complaint reports containing:
-- Complaint ID
-- Citizen details
-- Complaint details
-- Status
-- Resolution details
-
----
-
-# 🎨 UI/UX Features
-
-- Modern UI
-- Responsive design
-- Clean dashboard layout
-- Card-based interface
-- Smooth buttons
-- Mobile-friendly
-- Simple navigation
-
----
-
-# 🔥 Optional Advanced Features
-
-- Dark mode
-- Complaint search
-- Duplicate complaint detection
-- Fake image detection
-- Live complaint map
-- Complaint heatmap
-- Mobile responsiveness
-
----
-
-# 🛠️ Tech Stack
+| Category | Technology |
+|----------|------------|
+| Frontend | ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white) |
+| Backend | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-black?logo=flask&logoColor=white) |
+| AI | ![Gemini](https://img.shields.io/badge/Gemini_AI-4285F4?logo=google&logoColor=white) |
+| Storage | ![Memory](https://img.shields.io/badge/In_Memory-34A853?style=flat) |
+| Deployment | ![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=black) |
 
 ## Frontend
 - HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Chart.js
-
+  
 ## Backend
-- Python Flask
+- Python
+- Flask
 
 ## AI
 - Google Gemini API
 
-## Database
-- Python dictionaries (temporary in-memory database)
-
-## Other Libraries
+## Libraries
+- google-genai
 - qrcode
-- werkzeug
-- dotenv
+- Pillow
+- python-dotenv
 
-The system automatically:
-- Flags the complaint
-- Notifies the supervisor
-- Highlights delayed cases for faster resolution
-# 📁 Project Structure
+## Data Storage
+- Temporary in-memory Python structures
+
+# Project Structure
 
 ```text
 ResolveX/
 │
 ├── app.py
-├── ai_analysis.py
 ├── requirements.txt
+├── .gitignore
 ├── README.md
-├── .env
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   └── main.js
-│   │
-│   ├── uploads/
-│   │
-│   └── qr_codes/
 │
 ├── templates/
-│   ├── index.html
 │   ├── login.html
-│   ├── signup.html
-│   ├── citizen_dashboard.html
-│   ├── official_dashboard.html
-│   ├── supervisor_dashboard.html
-│   ├── report_issue.html
-│   ├── complaint_details.html
-│   ├── analytics.html
-│   └── my_requests.html
+│   ├── citizen.html
+│   ├── admin.html
+│   ├── supervisor.html
+│   └── track.html
 │
-└── utils/
-    ├── auth.py
-    ├── notifications.py
-    └── sla_checker.py
+└── .env (local only)
 ```
-# ⚙️ Installation Guide
 
-## 1️⃣ Clone Repository
+---
+
+# Installation
+
+Clone:
 
 ```bash
-git clone https://github.com/yourusername/ResolveX.git
+git clone <repo_url>
 cd ResolveX
 ```
 
----
-
-## 2️⃣ Create Virtual Environment
-
-### Windows
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Linux / Mac
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-## 3️⃣ Install Dependencies
+Install:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 4️⃣ Setup Environment Variables
-
-Create a `.env` file:
+Create `.env`
 
 ```env
-GEMINI_API_KEY=your_api_key_here
-SECRET_KEY=your_secret_key
+GEMINI_API_KEY=your_api_key
 ```
 
-Get Gemini API Key from:
-
-https://aistudio.google.com
-
----
-
-## 5️⃣ Run Flask Application
+Run:
 
 ```bash
 python app.py
 ```
 
-Open in browser:
+Open:
 
 ```text
 http://127.0.0.1:5000
@@ -351,123 +227,57 @@ http://127.0.0.1:5000
 
 ---
 
-# 🔐 Security Features
+# Demo Credentials
 
-- Password hashing
-- File upload validation
-- Session authentication
-- Input validation
-- Secure API key storage
-# 📸 Screenshots
-
-## 🏠 Home Page
-(Add screenshot here)
-
----
-
-## 👥 Citizen Dashboard
-(Add screenshot here)
-
----
-
-## 🤖 AI Analysis
-(Add screenshot here)
-
----
-
-## 📊 Public Analytics
-(Add screenshot here)
-# 🧪 Sample Test Accounts
-
-## 👤 Citizen
+Citizen:
 ```text
-Email: citizen@test.com
-Password: 123456
+citizen1
+password123
 ```
 
-## 🏢 Official
+Admin:
 ```text
-Email: official@test.com
-Password: 123456
+admin1
+admin123
 ```
 
-## 🛡️ Supervisor
+Supervisor:
 ```text
-Email: supervisor@test.com
-Password: 123456
+super1
+super123
 ```
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
+- Database integration
+- Authentication system
+- Complaint notifications
+- File storage
+- Government integration
+- Analytics dashboard
 
-- MySQL database integration
-- Email/SMS notifications
-- Mobile app version
-- Real-time complaint tracking
-- Government API integration
-- Voice-based complaint reporting
+# Hackathon Highlights
+- AI Vision Analysis
+- QR Complaint Tracking
+- Role-Based Dashboards
+- Department Trust Metrics
+- Multi-language Support
+  
+# Project Status
 
----
+🟢 Core Platform Complete  
+🟢 Gemini AI Integrated  
+🟢 QR Tracking Implemented  
+🟢 Multi-language Support Enabled  
+🟢 Deployment Ready  
+🟡 Database Integration (Future)  
 
-# 📈 Hackathon Highlights
 
-- ✅ AI-powered complaint analysis
-- ✅ QR-based tracking system
-- ✅ SLA escalation feature
-- ✅ Transparency dashboard
-- ✅ Multi-language support
-- ✅ Role-based dashboards
-- ✅ Responsive UI
-- ✅ Beginner-friendly architecture
+# Vision
+Report → Analyze → Track → Resolve
+Building smarter and more transparent civic management.
 
----
+Report → Analyze → Track → Resolve
 
-# 📜 License
-
-This project is developed for:
-- Educational purposes
-- Hackathons
-- Smart city innovation
-
----
-
-# ❤️ Inspiration
-
-Inspired by the need for:
-- Transparent governance
-- Smart civic management
-- Faster issue resolution
-- Better citizen engagement
-
----
-
-# 🌟 Final Vision
-
-ResolveX is more than a complaint portal.
-
-It is a step toward:
-- AI-assisted governance
-- Transparent administration
-- Smarter cities
-- Better civic trust
-
----
-
-# ⭐ Support
-
-If you like this project:
-- Star the repository
-- Fork the project
-- Contribute improvements
-
----
-
-# 📬 Contact
-
-Team ResolveX
-
----
-
-# 🏆 “Report. Track. Resolve.”
-```
+Building smarter and more transparent civic management.
