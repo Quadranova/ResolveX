@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = "super_secret_key_for_prototype"
 
 # --- GOOGLE AI STUDIO SETUP ---
-GEMINI_API_KEY = "AIzaSyDenbF_5lxxK5eOTsowemXC2oFlpsolQhk"
+GEMINI_API_KEY = "ADD YOUR API KEY HERE"
 ai_client = genai.Client(api_key=GEMINI_API_KEY)
 
 # Simulated Users Database
