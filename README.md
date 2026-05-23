@@ -162,3 +162,15 @@ A public analytics dashboard displaying real-time civic complaint statistics and
 
 Built using:
 - Chart.js
+# ⏰ SLA Escalation System
+
+If a complaint is not updated within:
+
+```text
+48 hours
+```
+
+The system automatically:
+- Flags the complaint
+- Notifies the supervisor
+- Highlights delayed cases for faster resolution
