@@ -181,8 +181,6 @@ ResolveX/
 └── .env (local only)
 ```
 
----
-
 # Installation
 
 Clone:
@@ -216,8 +214,6 @@ Open:
 http://127.0.0.1:5000
 ```
 
----
-
 # Demo Credentials
 
 Citizen:
@@ -238,8 +234,6 @@ super1
 super123
 ```
 
----
-
 # Future Improvements
 - Database integration
 - Authentication system
@@ -257,7 +251,6 @@ super123
 - Multi-language Support
   
 # Project Status
-
 🟢 Core Platform Complete  
 🟢 Gemini AI Integrated  
 🟢 QR Tracking Implemented  
@@ -265,11 +258,7 @@ super123
 🟢 Deployment Ready  
 🟡 Database Integration (Future)  
 
-
 # Vision
 Report → Analyze → Track → Resolve
 Building smarter and more transparent civic management.
 
-Report → Analyze → Track → Resolve
-
-Building smarter and more transparent civic management.
