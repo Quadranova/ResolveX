@@ -57,16 +57,18 @@ Supported categories:
 - Public Safety Risks
 - Stray Dogs Issue
 
-Severity Levels:
-- Low
-- Medium
-- High
-- Critical
+### Severity Levels
+
+| Severity | Indicator | Meaning |
+|----------|-----------|---------|
+| 🟢 Low | ● | Minor issue — low urgency |
+| 🟡 Medium | ● | Moderate impact |
+| 🟠 High | ● | Requires quick attention |
+| 🔴 Critical | ● | Immediate action required |
+
 
 ## Citizen Dashboard
-
 Citizens can:
-
 - Upload issue images
 - Add issue description
 - Select preferred language
