@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ResolveX - Supervisor Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f6f9; }
+        .container { max-width: 1150px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        h2, h3 { color: #d9534f; }
+        .logout { float: right; background: #dc3545; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 14px;}
+        
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .score-card { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 15px; border-top: 4px solid #d9534f; }
+        .score-header { display: flex; justify-content: space-between; align-items: center; font-weight: bold; margin-bottom: 10px; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
+        .score-num { font-size: 24px; font-weight: bold; color: #0275d8; }
+        .metric-breakdown { font-size: 12px; color: #555; line-height: 1.5; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; }
+        th { background-color: #d9534f; color: white; }
+        
+        .status-badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; background: #e2e3e5; }
+        select, button { padding: 6px; border-radius: 4px; border: 1px solid #ccc; font-size: 13px; }
+        button { background-color: #d9534f; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #c9302c; }
+
+        /* SLA Breach Monitoring Indicators */
+        .sla-delay-row { background-color: #fff3cd !important; border-left: 5px solid #ffc107; }
+        .sla-danger-badge { color: #721c24; background-color: #f8d7da; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 11px; border: 1px solid #f5c6cb; }
+        .sla-normal-badge { color: #155724; background-color: #d4edda; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="logout">Logout</a>
+        <h2>Executive Supervisor Oversight Panel</h2>
+        <p>Cross-departmental performance reports, structural bottleneck tracking, operational reassignments, and SLA risk auditing.</p>
+        
+        <hr>
+
+        <h3>📊 Department-wise Civic Trust Scores (SLA & Resolution Metrics)</h3>
+        <div class="score-grid">
+            {% for dept, metrics in trust_scores.items() %}
+            <div class="score-card">
+                <div class="score-header">
+                    <span>{{ dept }}</span>
+                    <span class="score-num">{{ metrics.overall }}/100</span>
+                </div>
+                <div class="metric-breakdown">
+                    📈 <strong>Resolution Rate:</strong> {{ metrics.resolution_rate }}%<br>
+                    ⚡ <strong>Response Speed:</strong> {{ metrics.response_speed }}%<br>
+                    🛡️ <strong>SLA Adherence:</strong> {{ metrics.sla_adherence }}%<br>
+                    👤 <strong>Citizen Satisfaction:</strong> {{ metrics.citizen_sat }}%
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h3>🔍 Global Infrastructure Audit & Reassignment Log</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Incident ID</th>
+                    <th>Departmental Category Assignment</th>
+                    <th>AI Summary / Localization Notes</th>
+                    <th>Risk Factor</th>
+                    <th>SLA Operational Status</th>
+                    <th>Oversight Interventions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for issue in issues | reverse %}
+                {# Visual SLA Delay Tracker Rule: Unresolved Critical/High status tickets highlight automatically as SLA Alerts #}
+                <tr class="{% if issue.status != 'Resolved' and (issue.severity == 'Critical' or issue.severity == 'High') %}sla-delay-row{% endif %}">
+                    <td>#{{ issue.id }}</td>
+                    <form method="POST">
+                        <input type="hidden" name="issue_id" value="{{ issue.id }}">
+                        <td>
+                            <!-- Category Reassignment Selection Menu -->
+                            <select name="category" style="font-weight: bold;">
+                                <option value="Potholes & Road Damage" {% if issue.category == 'Potholes & Road Damage' %}selected{% endif %}>Potholes & Road Damage</option>
+                                <option value="Garbage Accumulation" {% if issue.category == 'Garbage Accumulation' %}selected{% endif %}>Garbage Accumulation</option>
+                                <option value="Water Leakage" {% if issue.category == 'Water Leakage' %}selected{% endif %}>Water Leakage</option>
+                                <option value="Broken Streetlights" {% if issue.category == 'Broken Streetlights' %}selected{% endif %}>Broken Streetlights</option>
+                                <option value="Drainage Issues" {% if issue.category == 'Drainage Issues' %}selected{% endif %}>Drainage Issues</option>
+                                <option value="Traffic Signal Failures" {% if issue.category == 'Traffic Signal Failures' %}selected{% endif %}>Traffic Signal Failures</option>
+                                <option value="Electrical Hazards" {% if issue.category == 'Electrical Hazards' %}selected{% endif %}>Electrical Hazards</option>
+                                <option value="Public Safety Risks" {% if issue.category == 'Public Safety Risks' %}selected{% endif %}>Public Safety Risks</option>
+                                <option value="Stray Dogs Issue" {% if issue.category == 'Stray Dogs Issue' %}selected{% endif %}>Stray Dogs Issue</option>
+                            </select>
+                        </td>
+                        <td>{{ issue.description }}</td>
+                        <td>
+                            <!-- Risk Severity Reassignment Override Selection Menu -->
+                            <select name="severity">
+                                <option value="Low" {% if issue.severity == 'Low' %}selected{% endif %}>Low</option>
+                                <option value="Medium" {% if issue.severity == 'Medium' %}selected{% endif %}>Medium</option>
+                                <option value="High" {% if issue.severity == 'High' %}selected{% endif %}>High</option>
+                                <option value="Critical" {% if issue.severity == 'Critical' %}selected{% endif %}>Critical</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span class="status-badge" style="margin-bottom: 5px;">{{ issue.status }}</span><br>
+                            {% if issue.status != 'Resolved' and (issue.severity == 'Critical' or issue.severity == 'High') %}
+                                <span class="sla-danger-badge">⚠️ SLA DELAY ALERT</span>
+                            {% else %}
+                                <span class="sla-normal-badge">✓ Within SLA</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <button type="submit">Reassign & Save</button>
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
