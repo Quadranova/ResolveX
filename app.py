@@ -2,8 +2,6 @@ import os
 import io
 import base64
 import qrcode
-from dotenv import load_dotenv
-load_dotenv()
 from flask import Flask, render_template_string, request, redirect, url_for, flash
 from google import genai
 from google.genai import types
@@ -12,11 +10,9 @@ app = Flask(__name__)
 app.secret_key = "super_secret_key_for_prototype"
 
 # --- GOOGLE AI STUDIO SETUP ---
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-
-if not GEMINI_API_KEY:
-    raise ValueError("GEMINI_API_KEY not found in environment variables")
-
+# Best Practice: Retrieves your API key safely from environment variables.
+# You can set it in your terminal before running: export GEMINI_API_KEY="your_actual_key"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "YOUR_FALLBACK_API_KEY_HERE")
 ai_client = genai.Client(api_key=GEMINI_API_KEY)
 
 # Simulated Users Database
@@ -568,4 +564,4 @@ def track_complaint(issue_id):
     return render_template_string(TRACK_HTML, issue=matched_issue)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
