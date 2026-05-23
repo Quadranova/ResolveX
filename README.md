@@ -287,3 +287,74 @@ ResolveX/
     ├── notifications.py
     └── sla_checker.py
 ```
+# ⚙️ Installation Guide
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/ResolveX.git
+cd ResolveX
+```
+
+---
+
+## 2️⃣ Create Virtual Environment
+
+### Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / Mac
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Setup Environment Variables
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+SECRET_KEY=your_secret_key
+```
+
+Get Gemini API Key from:
+
+https://aistudio.google.com
+
+---
+
+## 5️⃣ Run Flask Application
+
+```bash
+python app.py
+```
+
+Open in browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+# 🔐 Security Features
+
+- Password hashing
+- File upload validation
+- Session authentication
+- Input validation
+- Secure API key storage
