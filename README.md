@@ -134,7 +134,8 @@ Departments:
 Supported languages:
 - English
 - Hindi
-- Kannada
+- French
+- Spanish
 
 AI analysis is returned in the selected language.
 
