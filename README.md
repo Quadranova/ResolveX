@@ -59,12 +59,12 @@ Supported categories:
 
 ### Severity Levels
 
-| Severity | Indicator | Meaning |
-|----------|-----------|---------|
-| 🟢 Low | ● | Minor issue — low urgency |
-| 🟡 Medium | ● | Moderate impact |
-| 🟠 High | ● | Requires quick attention |
-| 🔴 Critical | ● | Immediate action required |
+| Severity | Meaning |
+|----------|---------|
+| 🟢 Low | Minor issue — low urgency |
+| 🟡 Medium | Moderate impact |
+| 🟠 High | Requires quick attention |
+| 🔴 Critical | Immediate action required |
 
 
 ## Citizen Dashboard
