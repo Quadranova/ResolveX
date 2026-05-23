@@ -243,6 +243,17 @@ super123
 - Integration with existing municipal CCTV infrastructure
 - Voice-based complaint reporting
 
+# Budget & Scalability Considerations
+- ResolveX is designed as a scalable civic technology platform.
+- Current prototype focuses on validating workflow efficiency and AI-assisted reporting.
+- Large-scale deployment can be implemented in phases depending on city size and available infrastructure
+  
+| Deployment Scale | Estimated Cost |
+|------------------|---------------|
+| ResolveX Software Platform (Prototype → Production) | ₹6L – ₹20L |
+| Medium City Deployment (with phased CCTV integration) | ₹1Cr – ₹3Cr |
+| Full Smart City Deployment | ₹5Cr – ₹12Cr+ |
+
 # Hackathon Highlights
 - AI Vision Analysis
 - QR Complaint Tracking
