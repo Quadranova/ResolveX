@@ -131,3 +131,15 @@ Supported Languages:
 Gemini AI generates responses in the user-selected language for a more accessible and inclusive experience.
 Confidence: 92%
 ```
+# 📱 QR Code Complaint Tracking
+
+Every complaint generates a unique QR code.
+
+When scanned:
+- Opens the complaint tracking page directly
+
+QR codes are stored locally in:
+
+```text
+static/qr_codes/
+```
