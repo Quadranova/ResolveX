@@ -6,7 +6,6 @@
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![QR_Code](https://img.shields.io/badge/QR_Tracking-111827?style=for-the-badge)
 ![Hackathon](https://img.shields.io/badge/Hackathon_Project-FF6B00?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge)
@@ -141,8 +140,6 @@ AI analysis is returned in the selected language.
 
 # Tech Stack
 
-# 🛠 Tech Stack
-
 | Category | Technology |
 |----------|------------|
 | Frontend | ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white) |
@@ -152,21 +149,17 @@ AI analysis is returned in the selected language.
 | Deployment | ![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=black) |
 
 ## Frontend
-- HTML
-  
+- HTML  
 ## Backend
 - Python
 - Flask
-
 ## AI
 - Google Gemini API
-
 ## Libraries
 - google-genai
 - qrcode
 - Pillow
 - python-dotenv
-
 ## Data Storage
 - Temporary in-memory Python structures
 
