@@ -28,18 +28,17 @@ ResolveX addresses this using AI-assisted issue analysis and transparent trackin
 # Project Objective
 
 ResolveX aims to:
-
 - Simplify complaint reporting
 - Automate issue categorization
 - Improve operational transparency
 - Enable complaint tracking
 - Support multilingual accessibility
+- ResolveX consolidates multiple civic issue categories into a single platform instead of requiring separate reporting workflows for different issue types
 
 # Features
 
 ## AI Complaint Analysis
 Citizens upload an image.
-
 Gemini AI automatically:
 - Detects civic issue category
 - Estimates severity
@@ -147,21 +146,6 @@ AI analysis is returned in the selected language.
 | AI | ![Gemini](https://img.shields.io/badge/Gemini_AI-4285F4?logo=google&logoColor=white) |
 | Storage | ![Memory](https://img.shields.io/badge/In_Memory-34A853?style=flat) |
 | Deployment | ![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=black) |
-
-## Frontend
-- HTML  
-## Backend
-- Python
-- Flask
-## AI
-- Google Gemini API
-## Libraries
-- google-genai
-- qrcode
-- Pillow
-- python-dotenv
-## Data Storage
-- Temporary in-memory Python structures
 
 # Project Structure
 
