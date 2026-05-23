@@ -12,7 +12,7 @@ ResolveX is an AI-powered civic issue reporting platform that enables citizens t
 
 # Problem Statement
 
-Urban civic issues are often:
+Civic issues are often:
 - Difficult to report
 - Slow to resolve
 - Hard to track
