@@ -377,3 +377,97 @@ http://127.0.0.1:5000
 
 ## 📊 Public Analytics
 (Add screenshot here)
+# 🧪 Sample Test Accounts
+
+## 👤 Citizen
+```text
+Email: citizen@test.com
+Password: 123456
+```
+
+## 🏢 Official
+```text
+Email: official@test.com
+Password: 123456
+```
+
+## 🛡️ Supervisor
+```text
+Email: supervisor@test.com
+Password: 123456
+```
+
+---
+
+# 🚀 Future Improvements
+
+- MySQL database integration
+- Email/SMS notifications
+- Mobile app version
+- Real-time complaint tracking
+- Government API integration
+- Voice-based complaint reporting
+
+---
+
+# 📈 Hackathon Highlights
+
+- ✅ AI-powered complaint analysis
+- ✅ QR-based tracking system
+- ✅ SLA escalation feature
+- ✅ Transparency dashboard
+- ✅ Multi-language support
+- ✅ Role-based dashboards
+- ✅ Responsive UI
+- ✅ Beginner-friendly architecture
+
+---
+
+# 📜 License
+
+This project is developed for:
+- Educational purposes
+- Hackathons
+- Smart city innovation
+
+---
+
+# ❤️ Inspiration
+
+Inspired by the need for:
+- Transparent governance
+- Smart civic management
+- Faster issue resolution
+- Better citizen engagement
+
+---
+
+# 🌟 Final Vision
+
+ResolveX is more than a complaint portal.
+
+It is a step toward:
+- AI-assisted governance
+- Transparent administration
+- Smarter cities
+- Better civic trust
+
+---
+
+# ⭐ Support
+
+If you like this project:
+- Star the repository
+- Fork the project
+- Contribute improvements
+
+---
+
+# 📬 Contact
+
+Team ResolveX
+
+---
+
+# 🏆 “Report. Track. Resolve.”
+```
