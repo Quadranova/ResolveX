@@ -101,4 +101,13 @@ Citizens can:
 
 Uploaded files are stored locally in:
 ```text
-static/uploads/
+# AI Image Analysis (Google Gemini API)
+
+## When a user uploads an image:
+
+Gemini AI analyzes the complaint image
+Detects issue category
+Predicts severity
+Suggests department
+Detects spam/fake images
+Example AI Outputstatic/uploads/
